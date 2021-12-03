@@ -1,0 +1,1 @@
+cmd_/home/atarget/lisg/kernel/ipt_ISG.ko := ld -r -m elf_x86_64 --build-id=sha1  -T scripts/module.lds -o /home/atarget/lisg/kernel/ipt_ISG.ko /home/atarget/lisg/kernel/ipt_ISG.o /home/atarget/lisg/kernel/ipt_ISG.mod.o;  true

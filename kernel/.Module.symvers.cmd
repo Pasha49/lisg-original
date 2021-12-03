@@ -1,0 +1,1 @@
+cmd_/home/atarget/lisg/kernel/Module.symvers := sed 's/ko$$/o/' /home/atarget/lisg/kernel/modules.order | scripts/mod/modpost -m -a   -o /home/atarget/lisg/kernel/Module.symvers -e -i Module.symvers   -T -
