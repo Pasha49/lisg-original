@@ -19,7 +19,7 @@ $cfg{nas_identifier} = "10.9.18.23"; ## By default equals to NAS IP-address
 
 ### CoA-related settings
 #$cfg{coa_server} = "127.0.0.1";  ## Accept requests only from this IP (comment to accept from all)
-$cfg{coa_secret} = "neocom_ipoe_dae_password";	 ## Shared secret
+$cfg{coa_secret} = "dsadas";	 ## Shared secret
 $cfg{coa_port} = 3798;		 ## Local UDP port to listen for CoA requests
 
 ### Send Interim-Update to RADIUS server every session_alive_interval seconds
