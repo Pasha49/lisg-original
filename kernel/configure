@@ -18,7 +18,8 @@ get_lib_dir() {
 }
 
 get_lib_from_bin() {
-  LIB=`strings $IPTBIN | grep ^/.*lib.*tables`
+#  LIB=`strings $IPTBIN | grep ^/.*lib.*tables`
+  LIB=`/usr/lib/x86_64-linux-gnu/xtables`
   if [ "$LIB" ]; then
     IPTLIB=$LIB
     echo "$IPTLIB (from binary)"
@@ -67,7 +68,7 @@ iptables_ver() {
   if [ "$IPTVER" ]; then
     echo "$IPTVER (user specified)"
   else
-    IPTVER=`$IPTBIN -V | sed -n s/iptables.v//p`
+    IPTVER=`$IPTBIN -V | sed -n s/iptables.v//p | awk {'print $1'}`
     test "$IPTVER" || error "Can not find iptables version, try setting it with --ipt-ver="
     echo "$IPTVER (detected from $IPTBIN)"
   fi
